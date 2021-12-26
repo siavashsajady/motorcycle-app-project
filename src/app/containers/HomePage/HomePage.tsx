@@ -4,7 +4,9 @@ import tw from 'twin.macro';
 import { BookMotorcycle } from '../../components/BookMotorcycle/BookMotorcycle';
 import { Marginer } from '../../components/Marginer/Marginer';
 import { Navbar } from '../../components/Navbar/Navbar';
+import { AboutUs } from './AboutUs';
 import { BookingSteps } from './BookingSteps';
+import { TopMotorcycles } from './TopMotorcycles';
 import { TopSection } from './TopSection';
 
 const PageContainer = styled.div`
@@ -28,6 +30,10 @@ export function HomePage() {
       <BookMotorcycle />
       <Marginer direction='vertical' margin='10em' />
       <BookingSteps />
+      <Marginer direction='vertical' margin='8em' />
+      <AboutUs />
+      <Marginer direction='vertical' margin='8em' />
+      <TopMotorcycles />
     </PageContainer>
   );
 }

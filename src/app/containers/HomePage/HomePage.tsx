@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 import { BookMotorcycle } from '../../components/BookMotorcycle/BookMotorcycle';
+import { Footer } from '../../components/Footer/Footer';
 import { Marginer } from '../../components/Marginer/Marginer';
 import { Navbar } from '../../components/Navbar/Navbar';
 import { AboutUs } from './AboutUs';
@@ -34,6 +35,7 @@ export function HomePage() {
       <AboutUs />
       <Marginer direction='vertical' margin='8em' />
       <TopMotorcycles />
+      <Footer />
     </PageContainer>
   );
 }

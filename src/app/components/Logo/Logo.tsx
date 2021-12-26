@@ -4,6 +4,10 @@ import tw from 'twin.macro';
 
 import MotorLogoImg from '../../../assets/images/motorcycle-logo.png';
 
+interface ILogoProps {
+  color?: 'white' | 'dark';
+}
+
 const LogoContainer = styled.div`
   ${tw`
         flex 
@@ -18,8 +22,10 @@ const LogoText = styled.div`
         font-bold
         text-black 
         m-1 
-    `}
-`;
+        
+    `};
+  ${({ color }: any) => (color === 'white' ? tw`text-white` : tw`text-black`)}
+` as any;
 const Image = styled.div`
   width: auto;
   ${tw`
@@ -32,13 +38,14 @@ const Image = styled.div`
   }
 `;
 
-export function Logo() {
+export function Logo(props: ILogoProps) {
+  const { color } = props;
   return (
     <LogoContainer>
       <Image>
         <img src={MotorLogoImg} alt='motorcycle logo' />
       </Image>
-      <LogoText>RoyalCycle</LogoText>
+      <LogoText color={color || 'dark'}>RoyalCycle</LogoText>
     </LogoContainer>
   );
 }
